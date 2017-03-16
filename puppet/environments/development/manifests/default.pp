@@ -47,3 +47,7 @@ service {'simplestats':
         enable => true,
         provider => 'upstart',
 }
+
+
+# Make sure our config is there before the service
+File['/etc/init/simplestats.conf'] ~> Service['simplestats']
