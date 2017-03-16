@@ -66,4 +66,10 @@ Vagrant.configure("2") do |config|
   # Puppet, Chef, Ansible, Salt, and Docker are also available. Please see the
   # documentation for more information about their specific syntax and use.
   config.vm.provision "shell", path: "install-api-env.sh"
+
+  config.vm.provision "puppet" do |puppet|
+        puppet.options = '--verbose'
+        puppet.environment = 'development'
+        puppet.environment_path = 'puppet/environments'
+  end
 end

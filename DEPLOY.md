@@ -2,6 +2,12 @@
 
 Our dev deployment environment is going to be a Ubuntu 14.04 VM with Puppet.
 
+# Deployment instructions for Vagrant `puppet apply` provisioner
+
+Using the provided Vagrantfile, do a `vagrant destroy` to make sure you are starting
+clean.  Then run a `vagrant up --provision-with puppet` and the puppet manifest
+located at `puppet/environment/development/mainfests/default.pp` will be
+applied, installing the necessary packages and starting up the service.
 
 # Deployment instructions for Vagrant Shell provisioner
 
