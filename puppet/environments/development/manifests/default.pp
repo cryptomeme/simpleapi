@@ -34,3 +34,16 @@ file {'/opt/simplestats/simplestats.rb':
 	require => File['/opt/simplestats'],
 }
 
+
+# Install a copy of the Upstart init script in the VM
+file { '/etc/init/simplestats.conf':
+	ensure => file,
+	source => "file:///vagrant/init/simplestats.conf",
+}
+
+# Configure the service, matched the service name to the init file we just installed
+service {'simplestats':
+        ensure => running,
+        enable => true,
+        provider => 'upstart',
+}
