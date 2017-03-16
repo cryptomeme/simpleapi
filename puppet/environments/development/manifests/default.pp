@@ -49,5 +49,10 @@ service {'simplestats':
 }
 
 
-# Make sure our config is there before the service
+# Make sure our config is there before the service, and restart the service
+# if it changed
 File['/etc/init/simplestats.conf'] ~> Service['simplestats']
+
+
+Package['ruby-rack'] -> Service['simplestats']
+Package['ruby-sinatra'] -> Service['simplestats']
