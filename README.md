@@ -85,3 +85,4 @@ Code | Description | Schema
 * The API will be implemented in Ruby
 	- We will use Sinatra to handle request routing
 	- We will use RSpec to write some tests
+* We provide manual, shell, and puppet provisioning scripts, along wih a Vagrantfile, see DEPLOY.manual.md and DEPLOY.md
