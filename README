@@ -1,0 +1,4 @@
+SimpleAPI is a RESTful service that will provide information about the system 
+it is running on, namely: cpuinfo, meminfo and uptime.
+
+
