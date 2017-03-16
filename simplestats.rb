@@ -16,6 +16,7 @@ end
 
 get "/cpuinfo" do
 	content_type "application/json"
+	
 	# parse the /proc/cpuinfo to JSON
 	begin
 		f = open('/proc/cpuinfo','r')
@@ -44,6 +45,7 @@ end
 
 get "/uptime" do
 	content_type "application/json"
+
 	# parse the /proc/uptime to JSON
 	begin
 		f = open('/proc/uptime','r')

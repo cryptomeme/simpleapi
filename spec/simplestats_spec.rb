@@ -26,20 +26,42 @@ describe "The Simple Stats API" do
 		end
 	end
 
-	context "Endpoints exist" do
-		it "gives an OK getting CPU info" do
+	context "CPU info" do
+		it "gives an OK" do
 			get "/cpuinfo"
 			expect(last_response).to be_ok
 		end
 
-		it "gives an OK getting Memory info" do
+		it "gives a valid JSON object" do
+			get "/cpuinfo"
+			resp = JSON.parse last_response.body
+			expect(resp.is_a? Hash).to be true
+		end
+	end
+
+	context "Memory info" do
+		it "gives an OK" do
 			get "/meminfo"
 			expect(last_response).to be_ok
 		end
 
-		it "gives an OK getting Uptime info" do
+		it "gives a valid JSON object" do
+			get "/meminfo"
+			resp = JSON.parse last_response.body
+			expect(resp.is_a? Hash).to be true
+		end
+	end
+
+	context "Uptime" do
+		it "gives an OK" do
 			get "/uptime"
 			expect(last_response).to be_ok
+		end
+
+		it "gives a valid JSON object" do
+			get "/uptime"
+			resp = JSON.parse last_response.body
+			expect(resp.is_a? Hash).to be true
 		end
 	end
 end
