@@ -2,6 +2,7 @@ ENV["RACK_ENV"] = "test"
 
 require_relative "../simplestats"
 
+require "json"
 require "rspec"
 require "rack/test"
 
