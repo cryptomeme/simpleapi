@@ -1,4 +1,4 @@
-## Implementation of the Simple API REST server endpoints
+## Implementation of the Simple Stats API REST server endpoints
 
 require "sinatra"
 

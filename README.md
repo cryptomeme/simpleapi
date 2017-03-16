@@ -1,15 +1,15 @@
-# Simple API Service
+# Simple Stats API Service
 
 ## Overview
 
-The Simple API service is a RESTful service that will provide information
+The Simple Stats API service is a RESTful service that will provide information
 about the system it is running on, namely: cpuinfo, meminfo and uptime.  It
 is implemented as a collection of REST endpoints that use JSON messages as
 their data format for both requests and responses.  Its implementation will
 emphasize simplicity and straightforwardness.
 
 
-## Simple API Specification
+## Simple Stats API Specification
 
 ### Version
 1.0
